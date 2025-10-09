@@ -1,0 +1,17 @@
+{
+  "files.associations": {
+    "*.py": "python",
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "manifest.json": "jsonc",
+    "pages.json": "jsonc",
+    "*.nvue": "vue",
+    "istream": "cpp",
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "vector": "cpp",
+    "iosfwd": "cpp"
+  },
+  "standard.enable": false
+}

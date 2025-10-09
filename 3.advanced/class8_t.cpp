@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+// 静态成员变量
+// 特点：
+// 1. 在编译阶段分配内存
+// 2. 类内声明，类外初始化
+// 3. 所有对象共享同一份数据
+
+class Person {
+public:
+  static int m_A;
+
+private:
+  static int m_B;
+};
+int Person::m_A = 10;
+int Person::m_B = 20;
+
+void test01() {
+
+  // 1. 通过对象访问
+  Person p1;
+  p1.m_A = 100;
+  cout << "p1.m_A = " << p1.m_A << endl;
+  //   cout << "p1.m_B = " << p1.m_B << endl;  // private成员无法访问
+
+  Person p2;
+  p2.m_A = 200;
+  cout << "p2.m_A = " << p2.m_A << endl;
+  cout << "p1.m_A = " << p1.m_A << endl;
+
+  // 2. 通过类名
+  cout << "m_A = " << Person::m_A << endl;
+  //   cout << "m_B = " << Person::m_B << endl;  // private成员无法访问
+}
+
+int main() {
+  test01();
+  return 0;
+}
